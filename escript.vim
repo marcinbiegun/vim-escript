@@ -1,6 +1,6 @@
 " Vim syntax file
 " Language:	Escript + POL functions
-" Maintainer:	Marcin Biegu <biegun.m@gmail.com>
+" Maintainer:	Marcin Biegun <biegun.m@gmail.com>
 " Filenames:	*.src *.inc *.cfg *.em
 " Last Change:	2010 Apr 17
 
@@ -12,10 +12,10 @@ syn case ignore
 
 " Escript comments
 syn match escriptLineComment "\/\/.*$"
-syn region escriptBlockComment start="/*" end="*/"
+syn region escriptBlockComment start="\/\*" end="\*\/"
 
 " Escript operators
-syn match escriptOperators "\~|\!|\@|\%|\^|\&|\*|\(|\)|\-|\+|\=|\||\/|\{|\}|\[|\]|\:|\;|\"|\'|\<|\>|\,|\.|\?"
+syn match escriptOperators "\~!@%^&*()\\-+=|/{}\[]:;\"'<>,.?" contained
 
 " Escript function names
 syn match escriptFunction1 "%function ^([a-zA-Z0-9_]+([0-9a-zA-Z_,:=+    ^-^"]++)^)$"
@@ -24,16 +24,21 @@ syn match escriptFunction2 "%exported function ^([a-zA-Z0-9_]+([0-9a-zA-Z_,:=+  
 " Escript indenting
 syn match escriptIndentStrings     "case|else|elseif|enum|for|foreach|function|if|program|repeat|while|do"
 syn match escriptUnindentStrings   "else|elseif|endif|endfunction|endprogram|endwhile|endcase|endenum|endfor|endforeach|until|dowhile"
-syn match escriptOpenBraceStrings  "case|else|elseif|enum|for|foreach|function|if|program|repeat|while|do|\{|\(|\["
-syn match escriptCloseBraceStrings "endcase|endif|endif|endenum|endfor|endforeach|endfunction|endif|endprogram|until|endwhile|dowhile|\}|\)|\]"
-syn match escriptOpenFoldStrings   "case|enum|for|foreach|function|if|program|repeat|while|do|\{|\(|\["
-syn match escriptCloseFoldStrings  "endcase|endenum|endfor|endforeach|endfunction|endif|endprogram|until|endwhile|dowhile|\}|\)|\]"
+"syn match escriptOpenBraceStrings  "case|else|elseif|enum|for|foreach|function|if|program|repeat|while|do|\{|\(|\["
+syn match escriptOpenBraceStrings  "case|else|elseif|enum|for|foreach|function|if|program|repeat|while|do"
+"syn match escriptCloseBraceStrings "endcase|endif|endif|endenum|endfor|endforeach|endfunction|endif|endprogram|until|endwhile|dowhile|\}|\)|\]"
+syn match escriptCloseBraceStrings "endcase|endif|endif|endenum|endfor|endforeach|endfunction|endif|endprogram|until|endwhile|dowhile"
+"syn match escriptOpenFoldStrings   "case|enum|for|foreach|function|if|program|repeat|while|do|\{|\(|\["
+syn match escriptOpenFoldStrings   "case|enum|for|foreach|function|if|program|repeat|while|do"
+"syn match escriptCloseFoldStrings  "endcase|endenum|endfor|endforeach|endfunction|endif|endprogram|until|endwhile|dowhile|\}|\)|\]"
+syn match escriptCloseFoldStrings  "endcase|endenum|endfor|endforeach|endfunction|endif|endprogram|until|endwhile|dowhile"
 
 " Escript core keywords
 syn keyword escriptCoreKeywords array const dictionary endprogram endfunction endwhile error function includ program struct use var
 
 " Escript script keywords
-syn match escriptScriptKeywords "\!|\%|\&|\(|\)|\*|\+|\-|\.|\/\/|\/|\:|\;|\<|\=|\>|\[|\]|\^|and|break|byref|case|continue|default|downto|else|elseif|endcase|endenum|endfor|endforeach|endif|endwhile|enum|exported|for|foreach|if|in|not|or|repeat|return|to|until|while|\{|\||\}|\~"
+"syn match escriptScriptKeywords "\!|\%|\&|\(|\)|\*|\+|\-|\.|\/\/|\/|\:|\;|\<|\=|\>|\[|\]|\^|and|break|byref|case|continue|default|downto|else|elseif|endcase|endenum|endfor|endforeach|endif|endwhile|enum|exported|for|foreach|if|in|not|or|repeat|return|to|until|while|\{|\||\}|\~"
+syn match escriptScriptKeywords "and|break|byref|case|continue|default|downto|else|elseif|endcase|endenum|endfor|endforeach|endif|endwhile|enum|exported|for|foreach|if|in|not|or|repeat|return|to|until|while"
 
 " Escript EM files
 syn keyword escriptEmFiles ATTRIBUTES BASIC BASICIO BOAT CFGFILE CLILOC DATAFILE FILE GUILDS HTTP MATH NPC OS POLSYS STORAGE UO UTIL UNICODE VITALS
@@ -79,7 +84,7 @@ hi def link escriptBlockComment Comment
 hi def link escriptOperators Identifier
 hi def link escriptFunction1 Function
 hi def link escriptFunction2 Function
-hi def link escriptIndentStrings Identifier
+hi def link escriptIndentStrings Character
 hi def link escriptUnindentStrings Identifier
 hi def link escriptOpenBraceStrings Identifier
 hi def link escriptCloseBraceStrings Identifier
