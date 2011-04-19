@@ -17,6 +17,9 @@ syn region escriptBlockComment start="\/\*" end="\*\/"
 " Escript operators
 syn match escriptOperators "\~!@%^&*()\\-+=|/{}\[]:;\"'<>,.?" contained
 
+" Escript strings
+syn region escriptString start='"' end='"'
+
 " Escript function names
 syn match escriptFunction1 "%function ^([a-zA-Z0-9_]+([0-9a-zA-Z_,:=+    ^-^"]++)^)$"
 syn match escriptFunction2 "%exported function ^([a-zA-Z0-9_]+([0-9a-zA-Z_,:=+    ^-^"]++)^)$"
@@ -49,6 +52,7 @@ syn match escriptScriptKeywords "-"
 syn match escriptScriptKeywords "\."
 "syn match escriptScriptKeywords "\/"
 syn match escriptScriptKeywords ":"
+syn match escriptScriptKeywords ":="
 syn match escriptScriptKeywords ";"
 "syn match escriptScriptKeywords "<"
 syn match escriptScriptKeywords ">"
@@ -288,14 +292,15 @@ hi def link escriptCloseFoldStrings Identifier
 hi def link escriptCoreKeywords Type
 hi def link escriptScriptKeywords Type
 hi def link escriptEmFunctions Function
-hi def link escriptObjectMembers Special
+hi def link escriptObjectMembers Function
 hi def link escriptObjectMethods Special
 hi def link escriptConstants PreProc
 hi def link escriptOtherFunctions Function
+hi def link escriptString Character
 
 hi def link escriptLineComment Comment
 hi def link escriptBlockComment Comment
 
 let b:current_syntax = "escript"
 
-" vim:set sw=4:
+"vim:set sw=4:
