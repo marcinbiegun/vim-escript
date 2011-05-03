@@ -1,0 +1,7 @@
+== Escript.vim
+Vim sytax file for Escript language and {POL Server}[link:http://polserver.com] functions.
+Contains also simple plugin for compiling .src files in Vim.
+
+==== Work progress
+There's still some things to improve, but it's usable.
+
