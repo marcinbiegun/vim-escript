@@ -37,7 +37,7 @@ syn match escriptOpenFoldStrings   "case|enum|for|foreach|function|if|program|re
 syn match escriptCloseFoldStrings  "endcase|endenum|endfor|endforeach|endfunction|endif|endprogram|until|endwhile|dowhile"
 
 " Escript core keywords
-syn keyword escriptCoreKeywords array const dictionary endprogram endfunction endwhile error function includ program struct use var
+syn keyword escriptCoreKeywords array const dictionary endprogram endfunction endwhile error function include program struct use var
 
 
 " Escript script keywords
