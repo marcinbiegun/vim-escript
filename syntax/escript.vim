@@ -302,3 +302,6 @@ hi def link escriptLineComment Comment
 hi def link escriptBlockComment Comment
 
 let b:current_syntax = "escript"
+
+vim:set tabstop=4
+vim:set noexpandtab
