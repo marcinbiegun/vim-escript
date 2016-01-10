@@ -245,21 +245,21 @@ syn keyword escriptConstants TRIM_BOTH TRIM_LEFT TRIM_RIGHT VENDOR_SEND_AOS_TOOL
 
 " Escript other functions
 syn keyword escriptOtherFunctions ALCHEMY AP_AwardPoints AP_AwardRawAttributePoints AP_AwardTrainingPoints
-syn keyword escriptOtherFunctAP_BaseToRawSkill AP_ListAttributesByType AP_DoSkillCap AP_DoStatCap AP_GetBaseAttributeCap
-syn keyword escriptOtherFunctAP_GetLevelTitle AP_GetNeededRawPointsToIncrease AP_GetSkillCap AP_GetSkillStats
-syn keyword escriptOtherFunctAP_GetSkillTitle AP_GetStatCap AP_GetVitalRegenRateMod AP_RawToBaseSkill
-syn keyword escriptOtherFunctAP_SaveVitalRegenRateProp AP_SetSkillCap AP_SetStatCap AP_SetVitalRegenRateMod
-syn keyword escriptOtherFunctAP_SkillCheck AP_SkillCheckItem ANATOMY ANIMALLORE ARCANE ARCHERY ARMSLORE
-syn keyword escriptOtherFunctARTISTRY BATTLEDEXTERITY BATTLEFOCUS BEGGING BLACKSMITHY BOWCRAFT CAMPING
-syn keyword escriptOtherFunctCARPENTRY CARTOGRAPHY CHIVALRY CLUMSY COOKING DETECTHIDDEN DEXTERITY DISCORDANCE
-syn keyword escriptOtherFunctEVALUATINGINTELLIGENCE FARMING FENCING FISHING FORENSICS FORENSICEVALUATION
-syn keyword escriptOtherFunctGetRaceAttributeBaseValue GREATERPATH HEALING HERDING HIDING HITS ITEMIDENTIFICATION
-syn keyword escriptOtherFunctINSCRIPTION INTELLIGENCE INVOCATION ITEMID LEADERSHIP LESSERPATH LOCKPICKING
-syn keyword escriptOtherFunctLUMBERJACKING MACEFIGHTING MAGERY MAGICRESISTANCE MANA MEDITATION MINING
-syn keyword escriptOtherFunctMORPHING MUSICIANSHIP MUSICIANSHIP NECROMANCY PANIC PARALYSE PARRY PEACEMAKING
-syn keyword escriptOtherFunctPOISONING PROVOCATION REMOVETRAP RIDING SNOOPING SPIRITSPEAK STAMINA STAVES
-syn keyword escriptOtherFunctSTEALING STEALTH STONEWORKING STRENGTH SWORDSMANSHIP TACTICS TAILORING
-syn keyword escriptOtherFunctTAMING TASTEID TINKERING TRACKING VETERINARY WRESTLING
+syn keyword escriptOtherFunctions AP_BaseToRawSkill AP_ListAttributesByType AP_DoSkillCap AP_DoStatCap AP_GetBaseAttributeCap
+syn keyword escriptOtherFunctions AP_GetLevelTitle AP_GetNeededRawPointsToIncrease AP_GetSkillCap AP_GetSkillStats
+syn keyword escriptOtherFunctions AP_GetSkillTitle AP_GetStatCap AP_GetVitalRegenRateMod AP_RawToBaseSkill
+syn keyword escriptOtherFunctions AP_SaveVitalRegenRateProp AP_SetSkillCap AP_SetStatCap AP_SetVitalRegenRateMod
+syn keyword escriptOtherFunctions AP_SkillCheck AP_SkillCheckItem ANATOMY ANIMALLORE ARCANE ARCHERY ARMSLORE
+syn keyword escriptOtherFunctions ARTISTRY BATTLEDEXTERITY BATTLEFOCUS BEGGING BLACKSMITHY BOWCRAFT CAMPING
+syn keyword escriptOtherFunctions CARPENTRY CARTOGRAPHY CHIVALRY CLUMSY COOKING DETECTHIDDEN DEXTERITY DISCORDANCE
+syn keyword escriptOtherFunctions EVALUATINGINTELLIGENCE FARMING FENCING FISHING FORENSICS FORENSICEVALUATION
+syn keyword escriptOtherFunctions GetRaceAttributeBaseValue GREATERPATH HEALING HERDING HIDING HITS ITEMIDENTIFICATION
+syn keyword escriptOtherFunctions INSCRIPTION INTELLIGENCE INVOCATION ITEMID LEADERSHIP LESSERPATH LOCKPICKING
+syn keyword escriptOtherFunctions LUMBERJACKING MACEFIGHTING MAGERY MAGICRESISTANCE MANA MEDITATION MINING
+syn keyword escriptOtherFunctions MORPHING MUSICIANSHIP MUSICIANSHIP NECROMANCY PANIC PARALYSE PARRY PEACEMAKING
+syn keyword escriptOtherFunctions POISONING PROVOCATION REMOVETRAP RIDING SNOOPING SPIRITSPEAK STAMINA STAVES
+syn keyword escriptOtherFunctions STEALING STEALTH STONEWORKING STRENGTH SWORDSMANSHIP TACTICS TAILORING
+syn keyword escriptOtherFunctions TAMING TASTEID TINKERING TRACKING VETERINARY WRESTLING
 
 " Config (ultra edit)
 "L2"POL Config File"
@@ -268,7 +268,7 @@ syn keyword escriptOtherFunctTAMING TASTEID TINKERING TRACKING VETERINARY WRESTL
 "Line Comment Alt = #
 "Escape Char = \
 "File Extensions = CFG
-"Delimiters =     
+"Delimiters =
 "Function String = "%^([a-zA-Z0-9_ ]++^)[^p^r^n]{"
 "Indent Strings = "{"
 "Unindent Strings = "}"
@@ -296,11 +296,9 @@ hi def link escriptObjectMembers Function
 hi def link escriptObjectMethods Special
 hi def link escriptConstants PreProc
 hi def link escriptOtherFunctions Function
-hi def link escriptString Character
+hi def link escriptString String
 
 hi def link escriptLineComment Comment
 hi def link escriptBlockComment Comment
 
 let b:current_syntax = "escript"
-
-"vim:set sw=4:
